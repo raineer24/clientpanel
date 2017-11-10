@@ -4,7 +4,14 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angular
 //FirebaseObjectObservable to AngularFireObject.
 @Injectable()
 export class ClientService {
+  clients: AngularFireList<any[]>;
+  client: AngularFireObject<any>;
 
-  constructor() { }
+
+  constructor(
+    public af:AngularFireDatabase
+    ) {
+    this.clients = this.af.list()
+     }
 
 }
