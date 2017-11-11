@@ -53,7 +53,8 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
     AngularFireAuth,
